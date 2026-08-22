@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="数据结构大题/数据结构大题.vcxproj" Id="8786ac5d-d2b6-42b8-8e53-890464290bd3" />
+</Solution>
