@@ -159,6 +159,7 @@
     <ClCompile Include="..\线性表\顺序表\06.c" />
     <ClCompile Include="..\线性表\顺序表\07.c" />
     <ClCompile Include="..\线性表\顺序表\08.c" />
+    <ClCompile Include="..\线性表\顺序表\09.c" />
     <ClCompile Include="..\线性表\顺序表\in_out.c" />
     <ClCompile Include="..\线性表\顺序表\main.c" />
   </ItemGroup>

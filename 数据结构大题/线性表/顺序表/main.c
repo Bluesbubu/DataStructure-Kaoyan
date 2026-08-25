@@ -1,5 +1,6 @@
+#include<stdio.h>
 #include "in_out.h"
-#include"08.h"
+#include"09.h"
 int main() {
     // 第1题：删除最小值
     // SqList L;
@@ -134,24 +135,63 @@ int main() {
     //DestroyList(&L);
 
     //第8题
-    SqList L;
-    InitList(&L);
-    ListInsert(&L, 0, 1);
-    ListInsert(&L, 1, 3);
-    ListInsert(&L, 2, 5);
-    ListInsert(&L, 3, 7);
-    printf("原表: ");
-    PrintList(&L);
+    //SqList L;
+    //InitList(&L);
+    //ListInsert(&L, 0, 1);
+    //ListInsert(&L, 1, 3);
+    //ListInsert(&L, 2, 5);
+    //ListInsert(&L, 3, 7);
+    //printf("原表: ");
+    //PrintList(&L);
 
-    TwoDiv(&L, 4);  // 插入 4
-    printf("插入 4 后: ");
-    PrintList(&L);
+    //TwoDiv(&L, 4);  // 插入 4
+    //printf("插入 4 后: ");
+    //PrintList(&L);
 
-    TwoDiv(&L, 5);  // 找到 5，与后继交换
-    printf("交换 5 后: ");
-    PrintList(&L);
+    //TwoDiv(&L, 5);  // 找到 5，与后继交换
+    //printf("交换 5 后: ");
+    //PrintList(&L);
 
-    DestroyList(&L);
+    //DestroyList(&L);
+    
 
+    //第9题
+    SqList L1, L2, L3;
+    InitList(&L1);
+    InitList(&L2);
+    InitList(&L3);
+
+    ListInsert(&L1, 0, 2);
+    ListInsert(&L1, 1, 3);
+    ListInsert(&L1, 2, 4);
+    printf("L1: ");
+    PrintList(&L1);
+
+    ListInsert(&L2, 0, -1);
+    ListInsert(&L2, 1, 0);
+    ListInsert(&L2, 2, 2);
+    printf("L2: ");
+    PrintList(&L2);
+
+    ListInsert(&L3, 0, 1);
+    ListInsert(&L3, 1, 2);
+    ListInsert(&L3, 2, 3);
+    printf("L3: ");
+    PrintList(&L3);
+
+    int returnSize;
+    int* result = comVal(&L1, &L2, &L3, &returnSize);
+
+    printf("公共元素: ");
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    free(result);
+    DestroyList(&L1);
+    DestroyList(&L2);
+    DestroyList(&L3);
+    system("pause");
     return 0;
 }
